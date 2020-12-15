@@ -1,0 +1,20 @@
+<div class="card text-white mb-3" [ngClass]="'bg-' + info.Class">
+  <div class="card-body">
+    <p class="card-text">
+      {{ info.Date }}
+    </p>
+    <h5 class="card-title">
+      {{ info.Title }}
+    </h5>
+    <p class="card-text">
+      {{ readMore ? info.Content : info.Content.substring(0, 150) + " ..." }}
+    </p>
+    <button
+      type="button"
+      [ngClass]="'text-white btn btn-outline-' + info.Class"
+      (click)="readMore = !readMore"
+    >
+      {{ readMore ? "HIDE MORE" : "READ MORE" }}
+    </button>
+  </div>
+</div>
